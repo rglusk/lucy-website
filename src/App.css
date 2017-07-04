@@ -3,9 +3,16 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  padding:200px;
+  height: 200px;
 }
+
+.trail {
+    position: absolute;
+    height: 10px; width: 10px;
+    border-radius: 7px;
+    background: black;
+  }
 
 .App-header {
   background-color: #222;
