@@ -20,11 +20,20 @@ export default class Paint extends Component {
 
     constructor(...props) {
         super(...props);
-
+        this.image = new Image();
+        this.image.src = '/paintbrush.png';
         this.state = {
-            mouseDown: false,
-            mouseLoc: [0, 0],
+            isDrawing: false,
+            mouseLastLoc: [0, 0],
         };
+    }
+
+    distanceBetween(point1, point2) {
+        return Math.sqrt(Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2));
+    }
+
+    angleBetween(point1, point2) {
+        return Math.atan2(point2.x - point1.x, point2.y - point1.y);
     }
 
     componentDidMount() {
@@ -49,30 +58,38 @@ export default class Paint extends Component {
     }
 
     mouseDown = e => {
-        if (!this.state.mouseDown) this.setState({ mouseDown: true });
+        if (!this.state.isDrawing) this.setState({ isDrawing: true });
 
         this.setState({
-            mouseLoc: [e.pageX, e.pageY ],
+            mouseLastLoc: [e.pageX, e.pageY],
         });
 
-        this.context.moveTo(( e.pageX ),( e.pageY ));
+        this.context.moveTo((e.pageX), (e.pageY));
     }
 
-    mouseUp = () => (this.setState({ mouseDown: false }));
+
+    mouseUp = () => (this.setState({ isDrawing: false }));
 
     mouseMove = e => {
 
-        if (this.state.mouseDown) {
+        if (this.state.isDrawing) {
             // prevent IOS scroll when drawing
             if (
-                (e.pageX ) > 0 &&
-                (e.pageY ) < this.props.height
+                (e.pageX) > 0 &&
+                (e.pageY) < this.props.height
             ) {
-                this.context.lineTo(
-                    ((e.pageX ) ) ,
-                    ((e.pageY ) )
-                );
-                this.context.stroke();
+                const currentPoint = { x: e.pageX, y: e.pageY };
+                const lastPoint = { x: this.state.mouseLastLoc[0], y: this.state.mouseLastLoc[1] };
+                const dist = this.distanceBetween(lastPoint, currentPoint);
+                const angle = this.angleBetween(lastPoint, currentPoint);
+                for (var i = 0; i < dist; i++) {
+                    const x = lastPoint.x + (Math.sin(angle) * i) - 25;
+                    const y = lastPoint.y + (Math.cos(angle) * i) - 25;
+                    this.context.drawImage(this.image, x, y);
+                }
+                this.setState({
+                    mouseLastLoc: [currentPoint.x, currentPoint.y],
+                });            
             }
         }
     }
@@ -85,6 +102,7 @@ export default class Paint extends Component {
             className,
         } = this.props;
 
+
         return (
             <div className={className}>
                 <canvas
@@ -96,8 +114,8 @@ export default class Paint extends Component {
 
                     style={
                         Object.assign({}, style, {
-                            width: this.props.width,
-                            height: this.props.height,
+                            width: width,
+                            height: height,
                         })
                     }
 
@@ -114,3 +132,4 @@ export default class Paint extends Component {
 
 
 export { Paint };
+
