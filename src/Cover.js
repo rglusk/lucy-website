@@ -30,15 +30,15 @@ class Cover extends Component {
         return (
             <div className="App">
                 <Link to="/portfolio">
-                <Paint
-                    style={{ 
-                        backgroundImage:"url(" + logo + ")",
-                        backgroundSize: 'contain',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'center'               
-                    }}
-                    width={width}
-                    height={height}
+                    <Paint
+                        style={{ 
+                            backgroundImage: `url(${logo})`,
+                            backgroundSize: 'contain',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center'               
+                        }}
+                        width={width}
+                        height={height}
                     />
                 </Link>
             </div>
