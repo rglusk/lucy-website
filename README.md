@@ -2,18 +2,21 @@
 
 
 ## Prerequisites 
-`npm install -g firebase-tools`
+```npm install -g firebase-tools```
 
 ## To Run
 
-`npm start`
+```npm install```
+```npm start```
 
 ## To Build
 
-`npm run build`
+```npm install```
+```npm run build```
 
 ## To Deploy
 
-`npm run build`
-`firebase login`
-`firebase deploy`
+```npm install```
+```npm run build```
+```firebase login```
+```firebase deploy```
