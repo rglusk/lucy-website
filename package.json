@@ -8,7 +8,8 @@
     "react-overdrive": "0.0.9",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
-    "react-scripts": "1.0.8"
+    "react-scripts": "1.0.8",
+    "react-scroll-parallax": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
