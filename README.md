@@ -1,5 +1,9 @@
 # Lucy Webster Site
 
+
+## Prerequisites 
+`npm install -g firebase-tools`
+
 ## To Run
 
 `npm start`
