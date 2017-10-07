@@ -67,6 +67,16 @@ export default class Paint extends Component {
         this.context.moveTo((e.pageX), (e.pageY));
     }
 
+    distanceBetween(point1, point2) {
+        return Math.sqrt(Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2));
+    }
+    angleBetween(point1, point2) {
+        return Math.atan2(point2.x - point1.x, point2.y - point1.y);
+    }
+    getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
 
     mouseUp = () => (this.setState({ isDrawing: false }));
 
@@ -82,14 +92,20 @@ export default class Paint extends Component {
                 const lastPoint = { x: this.state.mouseLastLoc[0], y: this.state.mouseLastLoc[1] };
                 const dist = this.distanceBetween(lastPoint, currentPoint);
                 const angle = this.angleBetween(lastPoint, currentPoint);
+
                 for (var i = 0; i < dist; i++) {
-                    const x = lastPoint.x + (Math.sin(angle) * i) - 25;
-                    const y = lastPoint.y + (Math.cos(angle) * i) - 25;
-                    this.context.drawImage(this.image, x, y);
+                    var x = lastPoint.x + (Math.sin(angle) * i);
+                    var y = lastPoint.y + (Math.cos(angle) * i);
+                    this.context.save();
+                    this.context.translate(x, y);
+                    this.context.scale(0.5, 0.5);
+                    this.context.rotate(Math.PI * 180 / this.getRandomInt(0, 180));
+                    this.context.drawImage(this.image, 0, 0);
+                    this.context.restore();
                 }
                 this.setState({
                     mouseLastLoc: [currentPoint.x, currentPoint.y],
-                });            
+                });
             }
         }
     }
@@ -130,6 +146,4 @@ export default class Paint extends Component {
     }
 }
 
-
 export { Paint };
-
