@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { ParallaxController } from 'react-scroll-parallax';
 import { Parallax } from 'react-scroll-parallax';
 import Overdrive from 'react-overdrive';
-import './App.css';
 
-class Portfolio extends Component {
+class Overview extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -26,8 +25,8 @@ class Portfolio extends Component {
     render() {
         return (
             <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                <Overdrive id="big-to-small-logo" duration={1000} >
-                    <img src="/logo.png" width='200'/>
+                <Overdrive id="big-to-small-logo" duration={800} >
+                    <img src="/logo.png" width='250'/>
                 </Overdrive>
                 <h3>Hi there</h3>
                 <p>whats up dawg</p>
@@ -48,4 +47,4 @@ class Portfolio extends Component {
     }
 }
 
-export default Portfolio;
+export default Overview;

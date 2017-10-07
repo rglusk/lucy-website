@@ -5,15 +5,14 @@ import {
   Link
 } from 'react-router-dom'
 import Cover from './Cover'
-import Portfolio from './Portfolio'
+import Overview from './Overview'
 import AboutMe from './AboutMe'
 
 const Routes = () => (
   <Router>
     <div>
-
       <Route exact path="/" component={Cover}/>
-      <Route path="/portfolio" component={Portfolio}/>
+      <Route path="/overview" component={Overview}/>
       <Route path="/contact" component={AboutMe}/>
     </div>
   </Router>

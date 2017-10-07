@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.png';
 import { Link } from 'react-router-dom';
-import './App.css';
 import Paint from './Paint';
 import Overdrive from 'react-overdrive';
 
@@ -29,7 +27,7 @@ class Cover extends Component {
         const { width, height, name } = this.state;
         return (
             <div className="App">
-                <Link to="/portfolio">
+                <Link to="/overview">
                     <div className="logo-container">
                         <Overdrive id="big-to-small-logo">
                             <img src="/logo.png" width="800" />
