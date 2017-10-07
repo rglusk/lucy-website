@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.png';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import './App.css';
 import Paint from './Paint';
+import Overdrive from 'react-overdrive';
 
 class Cover extends Component {
-
     constructor(props) {
         super(props);
         this.state = { name: '', width: 0, height: '0' };
@@ -26,28 +26,31 @@ class Cover extends Component {
     }
 
     render() {
-        const {width,height,name} = this.state;
+        const { width, height, name } = this.state;
         return (
             <div className="App">
                 <Link to="/portfolio">
+                    <div className="logo-container">
+                        <Overdrive id="big-to-small-logo">
+                            <img src="/logo.png" width="800" />
+                        </Overdrive>
+                    </div>
                     <Paint
-                        style={{ 
-                            backgroundImage: `url(${logo})`,
+                        style={{
                             backgroundSize: 'contain',
                             backgroundRepeat: 'no-repeat',
-                            backgroundPosition: 'center'               
+                            backgroundPosition: 'center',
+                            position: 'absolute',
+                            top: 0,
+                            left: 0
                         }}
                         width={width}
                         height={height}
                     />
                 </Link>
             </div>
-
         );
     }
 }
 
 export default Cover;
-
-
-

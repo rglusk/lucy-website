@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { ParallaxController } from 'react-scroll-parallax';
 import { Parallax } from 'react-scroll-parallax';
+import Overdrive from 'react-overdrive';
+import './App.css';
 
 class Portfolio extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -16,27 +17,34 @@ class Portfolio extends Component {
                 { path: '/PERSONAL/MAKEUP_TEST_051.png', offsetXMax: 10, offsetXMin: -10, slowerScrollRate: false },
                 { path: '/PERSONAL/MAKEUP_TEST_052.png', offsetXMax: 10, offsetXMin: -10, slowerScrollRate: true },
                 { path: '/PERSONAL/MAKEUP_TEST_053.png', offsetXMax: 10, offsetXMin: -10, slowerScrollRate: false },
-                { path: '/PERSONAL/MAKEUP_TEST_055a.png', offsetXMax: 10, offsetXMin: -10, slowerScrollRate: true },
+                { path: '/PERSONAL/MAKEUP_TEST_055a.png', offsetXMax: 10, offsetXMin: -10, slowerScrollRate: true }
             ]
         };
         ParallaxController.init();
     }
 
     render() {
-        return <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <h3>Hi there</h3>
-            <p>whats up dawg</p>
-            {this.state.images.map((image, i) => <Parallax
-                key={image.path}
-                disabled={false}
-                offsetXMax={image.offsetXMax}
-                offsetXMin={image.offsetXMin}
-                slowerScrollRate={image.slowerScrollRate}
-                tag="figure"
-            >
-                <img src={image.path} height="800vh" />
-            </Parallax>)}
-        </div>;
+        return (
+            <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                <Overdrive id="big-to-small-logo" duration={1000} >
+                    <img src="/logo.png" width='200'/>
+                </Overdrive>
+                <h3>Hi there</h3>
+                <p>whats up dawg</p>
+                {this.state.images.map((image, i) => (
+                    <Parallax
+                        key={image.path}
+                        disabled={false}
+                        offsetXMax={image.offsetXMax}
+                        offsetXMin={image.offsetXMin}
+                        slowerScrollRate={image.slowerScrollRate}
+                        tag="figure"
+                    >
+                        <img src={image.path} height="800vh" />
+                    </Parallax>
+                ))}
+            </div>
+        );
     }
 }
 
