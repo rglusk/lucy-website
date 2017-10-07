@@ -1,5 +1,6 @@
 # Lucy Webster Site
 
+To view: https://lucy-webster.firebaseapp.com
 
 ## Prerequisites 
 ```
