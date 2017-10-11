@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Paint from './Paint';
 import Overdrive from 'react-overdrive';
 
+
 class Cover extends Component {
     constructor(props) {
         super(props);

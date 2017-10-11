@@ -9,7 +9,7 @@ class Overview extends Component {
         return (
             <div className="overview-container">
                 <Overdrive id="big-to-small-logo" duration={800}>
-                    <img src="/logo.png" width="250"/>
+                    <img src="/logo.png" width="250" />
                 </Overdrive>
                 <div className="menu-bar">
                     <span>collections</span>

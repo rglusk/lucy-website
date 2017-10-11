@@ -8,11 +8,12 @@ class Collection extends Component {
         console.log('you got into collection!')
         console.log(this.props.images)
 
-        return (
-            <div>
-                {this.props.images.map((photo, i) => <Photo key={i} path={photo.path} description={photo.description} />)}
-            </div>
-        )
+        return <div>
+            {this.props.images.map((photo, i) =>
+                <Photo
+                    key={i} path={photo.path} description={photo.description} />
+            )}
+        </div>
     }
 }
 
