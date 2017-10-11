@@ -6,7 +6,7 @@ import Overdrive from 'react-overdrive';
 class Cover extends Component {
     constructor(props) {
         super(props);
-        this.state = { name: '', width: 0, height: '0' };
+        this.state = { width: 0, height: 0 };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
 
@@ -24,7 +24,7 @@ class Cover extends Component {
     }
 
     render() {
-        const { width, height, name } = this.state;
+        const { width, height } = this.state;
         return (
             <div className="App">
                 <Link to="/overview">

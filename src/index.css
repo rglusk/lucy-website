@@ -8,6 +8,23 @@ body {
   text-align: center;
 }
 
+.overview-container{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: none;
+  width: 250px;
+  padding: 10px 15px 25px;
+}
+
 .logo-container{
     display: flex;
     justify-content: center;
@@ -46,4 +63,40 @@ body {
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.overview-container {
+  /* display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; */
+}
+
+.overview-content {
+  /* flex: 1 1 align-self;
+  overflow: auto; */
+}
+
+.photo-container {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.photo-container:hover .photo-overlay {
+  
+  color: black;
+}
+
+.photo-description {
+  margin: 30px 0;
+}
+
+.photo-overlay {
+  /* position: absolute; */
+  width: 100%;
+  text-align: center;
+  color: white;
+  transition: color 350ms;
 }
