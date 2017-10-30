@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Paint from './Paint';
-import Overdrive from 'react-overdrive';
 
+export default class Cover extends Component {
 
-class Cover extends Component {
     constructor(props) {
         super(props);
         this.state = { width: 0, height: 0 };
@@ -30,9 +29,7 @@ class Cover extends Component {
             <div className="App">
                 <Link to="/overview">
                     <div className="logo-container">
-                        <Overdrive id="big-to-small-logo">
-                            <img src="/logo.png" width="800" />
-                        </Overdrive>
+                            <img src="/logo.png" width="800" alt="logo-large"/>
                     </div>
                     <Paint
                         style={{
@@ -51,5 +48,3 @@ class Cover extends Component {
         );
     }
 }
-
-export default Cover;

@@ -1,6 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component} from 'react';
+import PropTypes from 'prop-types';
 
 export default class Paint extends Component {
+
     static propTypes = {
         className: PropTypes.string,
         style: PropTypes.object.isRequired,
@@ -9,6 +11,7 @@ export default class Paint extends Component {
         brushCol: PropTypes.string,
         lineWidth: PropTypes.number,
     };
+
     static defaultProps = {
         className: 'react-paint',
         style: {},

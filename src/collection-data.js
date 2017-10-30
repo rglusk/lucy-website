@@ -2,8 +2,8 @@ export const personal = [
     {
         path: '/PERSONAL/MAKEUP_TEST_006.png',
         description: `#testing
-hell*oooo*
-doing stuff`
+        hell*oooo*
+        doing stuff`
     },
     {
         path: '/PERSONAL/MAKEUP_TEST_013.png',
