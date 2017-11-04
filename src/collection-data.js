@@ -33,7 +33,7 @@ export const untitledLips = {
     description: 'styled by lucy webster, shot by luca nocera, retouched by nic frost',
     photos:[
         {
-            path: '/PERSONAL_LIPS_NAILS/Untitled-6.jpg',
+            path: '/PERSONAL_LIPS_NAILS/giphy (1).gif',
             placeholder: '/PERSONAL_LIPS_NAILS/Untitled-6.jpg',
         },
         // {
@@ -70,7 +70,7 @@ export const lumene = {
     description: 'styled by lucy webster, shot by george ward',
     photos:[
         {
-            path: '/LUMENE/SD_NORDIC_NOIR_SMOKEY_2.jpg',
+            path: '/LUMENE/giphy (2).gif',
             placeholder: '/LUMENE/SD_NORDIC_NOIR_SMOKEY_2.jpg',
         }
     ]

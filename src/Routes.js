@@ -36,7 +36,7 @@ const Routes = () => {
                                     )}
                                 />
                             </Switch>
-                        </CSSTransition>}
+                        </CSSTransition>
                     </TransitionGroup>
                 )}
             />
