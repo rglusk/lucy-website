@@ -1,13 +1,18 @@
 import React from 'react';
 import Photo from './Photo';
 
-const Collection = (props) => {
+const Collection = props => {
+    const { collectionInformation } = props;
     return (
         <div>
-            {props.images.map((photo) =>
+            {collectionInformation.photos.map(photo => (
                 <Photo
-                    key={photo.path} path={photo.path} description={photo.description} />
-            )}
+                    key={photo.path}
+                    path={photo.path}
+                    title={collectionInformation.title}
+                    description={collectionInformation.description}
+                />
+            ))}
         </div>
     );
 };

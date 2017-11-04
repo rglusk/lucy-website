@@ -19,6 +19,7 @@ body {
 .menu-bar {
   display: flex;
   flex-direction: row;
+  align-items: center;  
   justify-content: space-between;
   flex: none;
   width: 250px;
@@ -65,8 +66,11 @@ body {
 }
 
 .photo-container {
+  display:flex;  
   position: relative;
   margin-bottom: 80px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .photo-container:hover .photo-overlay {
@@ -100,5 +104,30 @@ body {
 .fade-exit.fade-exit-active {
   opacity: 0.01;
   transition: opacity 800ms ease-in;
+}
+
+.info-container > p {
+  font-style: italic;
+  font-size: 150%;
+}
+
+.info-start {
+  display: flex;
+  justify-content: left;
+  width: 50%;
+  margin: 2.5rem;
+}
+
+.info-middle {
+  display: flex;
+  justify-content: left;
+  margin: 2.5rem;
+}
+
+.info-end {
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+  margin: 2.5rem;
 }
 

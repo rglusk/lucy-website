@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Cover from './Cover';
 import Overview from './Overview';
-import AboutMe from './AboutMe';
+import Info from './Info';
 import NavigationBar from './NavigationBar';
 import CollectionBrowser from './CollectionBrowser';
 import ArtDirection from './ArtDirection';
@@ -29,7 +29,7 @@ const Routes = () => {
                                         <div className="overview-container">
                                             <NavigationBar />
                                             <Route path="/overview" component={Overview} />
-                                            <Route path="/info" component={AboutMe} />
+                                            <Route path="/info" component={Info} />
                                             <Route path="/collections" component={CollectionBrowser} />
                                             <Route path="/art-direction" component={ArtDirection} />
                                         </div>
