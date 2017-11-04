@@ -1,7 +1,7 @@
 import React from 'react';
 import Photo from './Photo';
 
-const Collection = props => {
+const Collection = (props) => {
     return (
         <div>
             {props.images.map((photo) =>

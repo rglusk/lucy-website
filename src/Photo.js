@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Photo = props => {
+const Photo = (props) => {
   return (
     <div className="photo-container">
       <img src={props.path} style={{ width: 350 }} alt={props.path} />
