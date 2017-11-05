@@ -66,6 +66,10 @@ export const untitledNails = {
         {
             path: '/PERSONAL_LIPS_NAILS/Untitled-4.jpg',
             placeholder: '/PERSONAL_LIPS_NAILS/Untitled-4.jpg',
+        },
+        {
+            path: '/PERSONAL_LIPS_NAILS/Untitled-3.jpg',
+            placeholder: '/PERSONAL_LIPS_NAILS/Untitled-3.jpg',
         }
     ]
 };
@@ -120,6 +124,10 @@ export const lumene = {
         {
             path: '/LUMENE/SD_CREAMS_EC_129.jpg',
             placeholder: '/LUMENE/SD_CREAMS_EC_129.jpg',
+        },
+        {
+            path: '/LUMENE/SD_CREAMS_EC_013.jpg',
+            placeholder: '/LUMENE/SD_CREAMS_EC_013.jpg',
         }
     ]
 };
