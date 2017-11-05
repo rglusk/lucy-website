@@ -26,8 +26,12 @@ body {
   padding: 10px 15px 25px;
 }
 
-.menu-bar > a {
+.menu-bar > a{
   text-decoration: none;
+}
+
+.menu-bar > a:active, a:hover { 
+  font-style: italic;
 }
 
 .logo-container{

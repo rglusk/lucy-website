@@ -37,10 +37,16 @@ class Slideshow extends Component {
         const { index } = this.state;
         return (
             <div className="photo-container">
-
                 <ProgressiveImage src={this.photos[index].path} placeholder={this.photos[index].placeholder}>
                     {src => <img style={{ height: 450 }} src={src} alt={this.photos[index].path} />}
                 </ProgressiveImage>
+                <div className="photo-overlay">
+                <div className="photo-description">
+                    <b>{this.props.collectionInformation.title}</b>
+                    <br />
+                    <i>{this.props.collectionInformation.description}</i>
+                </div>
+                </div>
             </div>
         );
     }
