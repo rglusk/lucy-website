@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Paint from './Paint';
+import Paint from '../Paint';
 
 export default class Cover extends Component {
 

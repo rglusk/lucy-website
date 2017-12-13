@@ -11,7 +11,7 @@ body {
 .overview-container{
   width: 100%;
   display:flex;
-  flex-direction: column;
+  flex-direction: column;  
   align-items: center;
   justify-content: center;
 }
@@ -28,11 +28,13 @@ body {
 
 .menu-bar > a{
   text-decoration: none;
+  text-decoration-color: black;
 }
 
 .menu-bar > a:active, a:hover { 
   font-style: italic;
 }
+
 
 .logo-container{
     display: flex;
@@ -67,6 +69,11 @@ body {
 
 .App-intro {
   font-size: large;
+}
+
+.cover-image{
+  position:relative;
+  z-index: -1;
 }
 
 .photo-container {
@@ -134,4 +141,3 @@ body {
   width: 60%;
   margin: 2.5rem;
 }
-

@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Cover from './Cover';
-import Overview from './Overview';
-import Info from './Info';
-import NavigationBar from './NavigationBar';
-import CollectionBrowser from './CollectionBrowser';
-import ArtDirection from './ArtDirection';
+import Cover from './components/Cover';
+import Overview from './components/Overview';
+import Info from './components/Info';
+import NavigationBar from './components/NavigationBar';
+import CollectionBrowser from './components/CollectionBrowser';
+import ArtDirection from './components/ArtDirection';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Routes = () => {

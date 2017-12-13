@@ -1,5 +1,5 @@
 import React from 'react';
-import { allCollections } from './collection-data';
+import { allCollections } from '../collection-data';
 import Slideshow from './Slideshow';
 
 function randomIntInRange(min, max) {
@@ -9,6 +9,7 @@ function randomIntInRange(min, max) {
 const Overview = () => {
     return (
         <div>
+            <img src='/BLATOSPHERE/Nail_polish_textures_022 .jpg' className="cover-image" alt='pic'/>
             {allCollections.map((collection, i) => {
                 const interval = randomIntInRange(600, 850);
                 return <Slideshow key={i} collectionInformation={collection} interval={interval} numberInRotation={4} />

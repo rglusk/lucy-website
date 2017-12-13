@@ -8,7 +8,7 @@ const Info = () => {
                 but originates from the yorkshire dales
             </p>
             <p className="info-middle">
-                graduating with a fashion degree lucy worked at labels edrem, steven tai and sophia webster
+                graduating with a fashion degree, lucy worked at labels edrem, steven tai and sophia webster
             </p>
             <p className="info-end">
                 after a change in career direction lucy worked a spring studios for 3 years where she
