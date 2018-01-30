@@ -30,7 +30,7 @@ const Routes = () => {
                                             <NavigationBar />
                                             <Route path="/overview" component={Overview} />
                                             <Route path="/info" component={Info} />
-                                            <Route path="/collections" component={CollectionBrowser} />
+                                            <Route path="/styling" component={CollectionBrowser} />
                                             <Route path="/art-direction" component={ArtDirection} />
                                         </div>
                                     )}

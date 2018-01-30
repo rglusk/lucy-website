@@ -8,7 +8,7 @@ const NavigationBar = () => {
                 <img src="/logo.png" width="250" alt="logo" />
             </Link>
             <div className="menu-bar">
-                <Link to="collections">
+                <Link to="styling">
                     <span>styling</span>
                 </Link>
                 <Link to="info">
